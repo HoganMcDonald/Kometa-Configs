@@ -8,30 +8,29 @@ libraries:
       managed: false
     collection_files:
       - repo: movies/awards
-        asset_directory: awards
+        asset_directory: config/assets/awards
       - repo: movies/movies
-        asset_directory: collections
+        asset_directory: config/assets/collections
       - repo: movies/hidden
-        asset_directory: collections
+        asset_directory: config/assets/collections
       - repo: movies/tmdb
-        asset_directory: collections
+        asset_directory: config/assets/collections
       - repo: charts
-        asset_directory: charts
+        asset_directory: config/assets/charts
       - repo: movies/studios
-        asset_directory: studios
+        asset_directory: config/assets/studios
       - repo: movies/people
-        asset_directory: people
+        asset_directory: config/assets/people
       - repo: movies/trakt
-        asset_directory: collections
+        asset_directory: config/assets/collections
       - repo: streaming
-        asset_directory: streaming
+        asset_directory: config/assets/streaming
       - repo: movies/seasonal
-        asset_directory: seasonal
+        asset_directory: config/assets/seasonal
     remove_overlays: false
     overlay_files:
       - reapply_overlays: false
       - repo: overlays/movies
-        asset_directory: overlays
     radarr:
       url: http://arr-suite-radarr:7878
       token: $RADARR_TOKEN
@@ -59,24 +58,23 @@ libraries:
       managed: false
     collection_files:
       - repo: tv/tv
-        asset_directory: collections
+        asset_directory: config/assets/collections
       - repo: tv/hidden
-        asset_directory: collections
+        asset_directory: config/assets/collections
       - repo: tv/trakt
-        asset_directory: collections
+        asset_directory: config/assets/collections
       - repo: charts
-        asset_directory: charts
+        asset_directory: config/assets/charts
       - repo: streaming
-        asset_directory: streaming
+        asset_directory: config/assets/streaming
       - repo: tv/seasonal
-        asset_directory: seasonal
+        asset_directory: config/assets/seasonal
     metadata_files:
       - repo: tv/metadata
     remove_overlays: false
     overlay_files:
       - reapply_overlays: false
       - repo: overlays/tv
-        asset_directory: overlays
     sonarr:
       url: http://arr-suite-sonarr:8989
       token: $SONARR_TOKEN
