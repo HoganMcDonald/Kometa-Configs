@@ -37,7 +37,6 @@ templates:
         label: <<smart_label>>
     sort_title: +++++<<collection_name>>
     summary: Collection of <<library_type>>s trending right now on <<website>>.
-    schedule: hourly
 
 collections:
   Unwatched:
