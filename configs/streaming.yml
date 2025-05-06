@@ -11,7 +11,7 @@ templates:
     mdblist_list: https://mdblist.com/lists/k0meta/<<key>>-originals
     summary: Collection of <<collection_name>> Original <<library_type>>s currently streaming.
     sort_title: +++<<collection_name>>
-    file_poster: config/assets/streaming/<<key>>.png
+    url_poster: https://raw.githubusercontent.com/hoganmcdonald/Kometa-Configs/main/img/collections/streaming/<<key>>.png
 
 dynamic_collections:
   Streaming:
