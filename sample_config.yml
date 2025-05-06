@@ -5,7 +5,8 @@ libraries:
   Movies:
     delete_collections:
       configured: false
-      managed: false
+      managed: true
+      less: 1
     collection_files:
       - repo: movies/awards
         asset_directory: config/assets/awards
@@ -55,7 +56,8 @@ libraries:
   TV Shows:
     delete_collections:
       configured: false
-      managed: false
+      managed: true
+      less: 1
     collection_files:
       - repo: tv/tv
         asset_directory: config/assets/collections
