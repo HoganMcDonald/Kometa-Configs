@@ -1,86 +1,91 @@
+######################################################
+#                  Media Libraries                   #
+######################################################
 libraries:
   Movies:
+    delete_collections:
+      configured: false
+      managed: false
     collection_files:
       - repo: movies/awards
-        asset_directory: config/assets/awards
+        asset_directory: awards
       - repo: movies/movies
-        asset_directory: config/assets/collections
+        asset_directory: collections
       - repo: movies/hidden
-        asset_directory: config/assets/collections
+        asset_directory: collections
       - repo: movies/tmdb
-        asset_directory: config/assets/collections
+        asset_directory: collections
       - repo: charts
-        asset_directory: config/assets/charts
+        asset_directory: charts
       - repo: movies/studios
-        asset_directory: config/assets/studios
+        asset_directory: studios
       - repo: movies/people
-        asset_directory: config/assets/people
+        asset_directory: people
       - repo: movies/trakt
-        asset_directory: config/assets/collections
+        asset_directory: collections
       - repo: streaming
-        asset_directory: config/assets/streaming
+        asset_directory: streaming
       - repo: movies/seasonal
-        asset_directory: config/assets/seasonal
+        asset_directory: seasonal
     remove_overlays: false
     overlay_files:
       - reapply_overlays: false
       - repo: overlays/movies
+        asset_directory: overlays
     radarr:
-      url: http://radarr:7878/radarr
-      token: 
-      add_existing: false
+      url: http://arr-suite-radarr:7878
+      token: $RADARR_TOKEN
       add_missing: false
-      search: false
-      monitor: true
-      availability: released
-      root_folder_path:
-      quality_profile: HD 1080p
+      add_existing: false
       upgrade_existing: false
       monitor_existing: false
-      ignore_cache: false
+      root_folder_path: /media/movies
+      monitor: true
+      availability: released
+      quality_profile: 1080p Balanced
+      tag:
+      search: false
       radarr_path:
       plex_path:
+      ignore_cache: false
     operations:
       assets_for_all: true
       split_duplicates: false
       content_rating_mapper:
         gb/12A: gb/12
-      metadata_backup:
-        path: config/metadata/movies.yml
-        sync_tags: true
-        add_blank_entries: true
-    settings:
-      asset_directory: config/assets/movies
   TV Shows:
+    delete_collections:
+      configured: false
+      managed: false
     collection_files:
       - repo: tv/tv
-        asset_directory: config/assets/collections
+        asset_directory: collections
       - repo: tv/hidden
-        asset_directory: config/assets/collections
+        asset_directory: collections
       - repo: tv/trakt
-        asset_directory: config/assets/collections
+        asset_directory: collections
       - repo: charts
-        asset_directory: config/assets/charts
+        asset_directory: charts
       - repo: streaming
-        asset_directory: config/assets/streaming
+        asset_directory: streaming
       - repo: tv/seasonal
-        asset_directory: config/assets/seasonal
+        asset_directory: seasonal
     metadata_files:
       - repo: tv/metadata
     remove_overlays: false
     overlay_files:
       - reapply_overlays: false
       - repo: overlays/tv
+        asset_directory: overlays
     sonarr:
-      url: http://sonarr:8989/sonarr
-      token: 
-      add_existing: false
-      add_missing: false
-      search: false
+      url: http://arr-suite-sonarr:8989
+      token: $SONARR_TOKEN
       cutoff_search: false
       monitor: all
-      root_folder_path: 
-      quality_profile: HD 1080p
+      add_missing: false
+      add_existing: false
+      root_folder_path: /media/tv-shows
+      quality_profile: 1080p Balanced
       language_profile: English
       upgrade_existing: false
       monitor_existing: false
@@ -96,14 +101,18 @@ libraries:
       content_rating_mapper:
         gb/12A: gb/12
       metadata_backup:
-        path: config/metadata/tv.yml
+        path: metadata/tv.yml
         sync_tags: true
         add_blank_entries: true
-    settings:
-      asset_directory: config/assets/tv
 playlist_files:
-  - repo: playlists
-    asset_directory: config/assets/playlists
+- default: playlist                  # This is a file within Kometa's defaults folder
+  template_variables:
+    libraries: Movies, TV Shows      # list of libraries that you want the Kometa Defaults playlists to look at
+
+
+######################################################
+#                      Settings                      #
+######################################################
 settings:
   cache: true
   cache_expiration: 60
@@ -136,7 +145,7 @@ settings:
   default_collection_order: release
   item_refresh_delay: 0
   playlist_sync_to_users: all
-  custom_repo: https://raw.githubusercontent.com/mikenobbs/Kometa-Configs/main/configs/
+  custom_repo: https://raw.githubusercontent.com/HoganMcDonald/Kometa-Configs/main/configs/
   show_missing_episode_assets: false
   show_asset_not_needed: false
   prioritize_assets: true
@@ -154,48 +163,55 @@ settings:
   overlay_quality:
   overlay_artwork_filetype: jpg
   overlay_artwork_quality:
-webhooks:
-  error: notifiarr
-  collection_removing: notifiarr
-  run_start: notifiarr
-  run_end: notifiarr
-  changes:
-  - notifiarr
-  version:
-  delete: notifiarr
-plex:
-  url: http://plex:32400
-  token: 
-  timeout: 120
+
+
+######################################################
+#                     Services                       #
+######################################################
+plex:                                # Can be individually specified per library as well; REQUIRED for the script to run
+  url: $PLEX_URL
+  token: $PLEX_TOKEN
+  timeout: 60
+  db_cache: 40
+  verify_ssl: true
   clean_bundles: true
   empty_trash: true
   optimize: true
-  db_cache:
-  verify_ssl:
 tmdb:
-  apikey: 
+  apikey: $TMDB_APIKEY
+  cache_expiration: 60
   language: en
-  cache_expiration: 60
-  region: GB
-tautulli:
-  url: http://tautulli:8181/tautulli
-  apikey: 
-omdb:
-  apikey: 
-  cache_expiration: 60
-mdblist:
-  apikey: 
-  cache_expiration: 60
-notifiarr:
-  apikey:
+  region:
 trakt:
-  client_id: 
-  client_secret: 
+  client_id: $TRAKT_CLIENT_ID
+  client_secret: $TRAKT_CLIENT_SECRET
+  pin: $TRAKT_PIN
   authorization:
+    # authorization section is autofilled by the script
     access_token:
     token_type:
-    expires_in: 
+    expires_in:
     refresh_token:
     scope:
     created_at:
-  pin:
+
+# webhooks:
+#   error: notifiarr
+#   collection_removing: notifiarr
+#   run_start: notifiarr
+#   run_end: notifiarr
+#   changes:
+#   - notifiarr
+#   version:
+#   delete: notifiarr
+# tautulli:
+#   url: http://tautulli:8181/tautulli
+#   apikey:
+# omdb:
+#   apikey:
+#   cache_expiration: 60
+# mdblist:
+#   apikey:
+#   cache_expiration: 60
+# notifiarr:
+#   apikey:
