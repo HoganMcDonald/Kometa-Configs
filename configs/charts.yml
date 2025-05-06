@@ -36,19 +36,27 @@ templates:
       all:
         label: <<smart_label>>
     sort_title: +++++<<collection_name>>
-    summary: Collection of <<library_type>>s trending this week on <<website>>, updated every Monday.
-    schedule: weekly(monday)
+    summary: Collection of <<library_type>>s trending right now on <<website>>.
+    schedule: hourly
 
 collections:
   Unwatched:
     template: {name: unwatched, library_type: <<library_type>>}
   IMDb Top 250:
     template: {name: imdb, chart: top}
-  TMDb Trending:
-    template: {name: charts, website: TMDb}
-    tmdb_trending_weekly: 100
-  Trakt Trending:
+  Top Ten:
     template: {name: charts, website: Trakt}
     trakt_chart:
       chart: trending
-      limit: 100
+      limit: 10
+      visible_home: true
+      visible_shared: true
+      visible_library: true
+      sonarr_add_missing: true
+      sonarr_add_existing: true
+      sonarr_search: false
+      sonarr_monitor: latest
+      radarr_add_missing: true
+      radarr_add_existing: true
+      radarr_monitor: true
+      radarr_search: true
