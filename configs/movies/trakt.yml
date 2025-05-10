@@ -12,10 +12,9 @@ dynamic_collections:
     template: trakt
     type: trakt_user_lists
     data: me
-    custom_keys: true
-    collection_order: custom
-    radarr_add_missing: true
-    radarr_search: true
-    radarr_monitor: true
-    visible_home: true
-    visible_library: false
+    template_variables:
+      radarr_add_missing: true
+      radarr_search: true
+      radarr_monitor: true
+      visible_home: true
+      visible_library: false
