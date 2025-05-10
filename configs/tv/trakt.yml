@@ -2,19 +2,37 @@
 #              Trakt Dynamic Collections             #
 ######################################################
 
-templates:
-  trakt:
-    trakt_list_details: <<trakt_user_lists>>
-
-dynamic_collections:
-  #Create collections based on the Trakt lists associated with the authenticated user.
-  Trakt List Collections:
-    template: trakt
-    type: trakt_user_lists
-    data: me
-    template_variables:
-      sonarr_add_missing: true
-      sonarr_search: true
-      sonarr_monitor: true
-      visible_home: true
-      visible_library: false
+collections:
+  Reality Background Noise:
+    trakt_list:
+      - https://trakt.tv/users/hogan12907/lists/reality-background-noise
+    collection_order: released
+    sync_mode: sync
+    schedule: hourly
+    sonarr_add_missing: true
+    sonarr_search: true
+    sonarr_monitor: true
+    visible_home: true
+    visible_library: false
+  Casual Nonsense:
+    trakt_list:
+      - https://trakt.tv/users/hogan12907/lists/casual-nonsense
+    collection_order: released
+    sync_mode: sync
+    schedule: hourly
+    sonarr_add_missing: true
+    sonarr_search: true
+    sonarr_monitor: true
+    visible_home: true
+    visible_library: false
+  Bweep:
+    trakt_list:
+      - https://trakt.tv/users/hogan12907/lists/casual-nonsense
+    sync_mode: append
+    collection_mode: hide
+    schedule: hourly
+    sonarr_add_missing: true
+    sonarr_search: true
+    sonarr_monitor: true
+    visible_home: false
+    visible_library: false
