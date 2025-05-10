@@ -2,70 +2,70 @@
 #                  Media Libraries                   #
 ######################################################
 libraries:
-  Movies:
-    delete_collections:
-      configured: false
-      managed: true
-    collection_files:
-      # awards
-      - default: oscars
-      - default: cannes
-
-      # collections
-      - default: franchise
-      - default: studios
-      - default: streaming
-      - default: seasonal
-
-      # custom
-      - repo: charts
-        asset_directory: config/assets/charts
-      - repo: movies/people
-        asset_directory: config/assets/people
-      - repo: movies/trakt
-        asset_directory: config/assets/collections
-    remove_overlays: true
-    overlay_files:
-      - default: streaming
-      - default: ribbon
-    radarr:
-      url: http://arr-suite-radarr:7878
-      token: $RADARR_TOKEN
-      add_missing: false
-      add_existing: false
-      upgrade_existing: false
-      monitor_existing: false
-      root_folder_path: /media/movies
-      monitor: true
-      availability: released
-      quality_profile: 1080p Balanced
-      tag:
-      search: true
-      radarr_path:
-      plex_path:
-      ignore_cache: false
-    operations:
-      assets_for_all: true
-      split_duplicates: false
-      content_rating_mapper:
-        gb/12A: gb/12
+  # Movies:
+  #   delete_collections:
+  #     configured: false
+  #     managed: true
+  #   collection_files:
+  #     # awards
+  #     - default: oscars
+  #     - default: cannes
+  #
+  #     # collections
+  #     - default: franchise
+  #     - default: studios
+  #     - default: streaming
+  #     - default: seasonal
+  #
+  #     # custom
+  #     - repo: charts
+  #       asset_directory: config/assets/charts
+  #     - repo: movies/people
+  #       asset_directory: config/assets/people
+  #     - repo: movies/trakt
+  #       asset_directory: config/assets/collections
+  #   remove_overlays: true
+  #   overlay_files:
+  #     - default: streaming
+  #     - default: ribbon
+  #   radarr:
+  #     url: http://arr-suite-radarr:7878
+  #     token: $RADARR_TOKEN
+  #     add_missing: false
+  #     add_existing: false
+  #     upgrade_existing: false
+  #     monitor_existing: false
+  #     root_folder_path: /media/movies
+  #     monitor: true
+  #     availability: released
+  #     quality_profile: 1080p Balanced
+  #     tag:
+  #     search: true
+  #     radarr_path:
+  #     plex_path:
+  #     ignore_cache: false
+  #   operations:
+  #     assets_for_all: true
+  #     split_duplicates: false
+  #     content_rating_mapper:
+  #       gb/12A: gb/12
   TV Shows:
     delete_collections:
       configured: false
       managed: true
     collection_files:
-      # awards
-      - default: emmy
-      - default: golden
-
-      # collections
-      - default: franchise
-      - default: networks
-      - default: streaming
-
-      # custom
-      - repo: charts
-        asset_directory: config/assets/charts
+      # # awards
+      # - default: emmy
+      # - default: golden
+      #
+      # # collections
+      # - default: franchise
+      # - default: networks
+      # - default: streaming
+      #
+      # # custom
+      # - repo: charts
+      #   asset_directory: config/assets/charts
       - repo: tv/trakt
         asset_directory: config/assets/collections
     metadata_files:
@@ -77,15 +77,16 @@ libraries:
     sonarr:
       url: http://arr-suite-sonarr:8989
       token: $SONARR_TOKEN
-      cutoff_search: false
-      monitor: all
       add_missing: false
       add_existing: false
+      upgrade_existing: false
+      monitor_existing: false
+      search: true
+      monitor: latest
+      cutoff_search: false
       root_folder_path: /media/tv-shows
       quality_profile: 1080p Balanced
       language_profile: English
-      upgrade_existing: false
-      monitor_existing: false
       ignore_cache: false
       series_type: standard
       season_folder: true
@@ -101,10 +102,10 @@ libraries:
         path: metadata/tv.yml
         sync_tags: true
         add_blank_entries: true
-playlist_files:
-- default: playlist
-  template_variables:
-    libraries: Movies, TV Shows
+# playlist_files:
+# - default: playlist
+#   template_variables:
+#     libraries: Movies, TV Shows
 
 
 ######################################################
