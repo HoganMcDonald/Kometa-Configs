@@ -4,9 +4,8 @@
 libraries:
   Movies:
     delete_collections:
-      configured: true
+      configured: false
       managed: true
-      less: 1
     collection_files:
       # - repo: movies/awards
       #   asset_directory: config/assets/awards
