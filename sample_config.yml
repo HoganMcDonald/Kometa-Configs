@@ -28,9 +28,9 @@ libraries:
       #   asset_directory: config/assets/streaming
       # - repo: movies/seasonal
       #   asset_directory: config/assets/seasonal
-    remove_overlays: false
+    remove_overlays: true
     overlay_files:
-      - reapply_overlays: false
+      - reapply_overlays: true
       - repo: overlays/movies
     radarr:
       url: http://arr-suite-radarr:7878
@@ -159,9 +159,9 @@ settings:
   - metadata
   - collections
   - overlays
-  overlay_filetype: jpg
+  overlay_filetype: png
   overlay_quality:
-  overlay_artwork_filetype: jpg
+  overlay_artwork_filetype: png
   overlay_artwork_quality:
 
 
