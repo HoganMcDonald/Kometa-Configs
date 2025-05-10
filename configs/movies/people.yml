@@ -17,19 +17,23 @@ templates:
       validate: true
     tmdb_person: <<person>>
     sort_title: ++<<collection_name>>
-    
-collections: 
+
+collections:
+  Anne Hathaway:
+    template: {name: actor, person: 1813}
   Christopher Nolan:
     template: {name: director, person: 525}
+  Greta Gerwig:
+    template: {name: director, person: 45400}
+  Keanu Reaves:
+    template: {name: actor, person: 6384}
+  Rose Byyrne:
+    template: {name: actor, person: 9827}
+  Seth Rogen:
+    template: {name: actor, person: 19274}
   The Coen Brothers:
     template: {name: director, person: "1223, 1224"}
     summary: Joel and Ethan Coen, collectively referred to as the Coen Brothers, are American film directors, producers, screenwriters, and editors. Their films span many genres and styles, which they frequently subvert or parody.
     sort_title: ++Coen Brothers
-  Leonardo DiCaprio:
-    template: {name: actor, person: 6193}
-  Martin Scorsese:
-    template: {name: director, person: 1032}
-  Quentin Tarantino:
-    template: {name: director, person: 138}
   Wes Anderson:
     template: {name: director, person: 5655}

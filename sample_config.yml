@@ -17,10 +17,9 @@ libraries:
       #   asset_directory: config/assets/collections
       - repo: charts
         asset_directory: config/assets/charts
-      # - repo: movies/studios
-      #   asset_directory: config/assets/studios
-      # - repo: movies/people
-      #   asset_directory: config/assets/people
+      - default: studios
+      - repo: movies/people
+        asset_directory: config/assets/people
       - repo: movies/trakt
         asset_directory: config/assets/collections
       - default: streaming
