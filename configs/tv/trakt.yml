@@ -12,4 +12,9 @@ dynamic_collections:
     template: trakt
     type: trakt_user_lists
     data: me
-    exclude: Stand-Up
+    template_variables:
+      sonarr_add_missing: true
+      sonarr_search: true
+      sonarr_monitor: true
+      visible_home: true
+      visible_library: false
