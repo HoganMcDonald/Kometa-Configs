@@ -7,8 +7,7 @@ libraries:
       configured: false
       managed: true
     collection_files:
-      # - repo: movies/awards
-      #   asset_directory: config/assets/awards
+      - default: awards
       # - repo: movies/movies
       #   asset_directory: config/assets/collections
       # - repo: movies/hidden
