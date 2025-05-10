@@ -4,7 +4,7 @@
 libraries:
   Movies:
     delete_collections:
-      configured: false
+      configured: true
       managed: true
       less: 1
     collection_files:
@@ -35,10 +35,10 @@ libraries:
     radarr:
       url: http://arr-suite-radarr:7878
       token: $RADARR_TOKEN
-      add_missing: true
-      add_existing: true
-      upgrade_existing: true
-      monitor_existing: true
+      add_missing: false
+      add_existing: false
+      upgrade_existing: false
+      monitor_existing: false
       root_folder_path: /media/movies
       monitor: true
       availability: released
