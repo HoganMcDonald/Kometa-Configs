@@ -29,8 +29,8 @@ libraries:
       #   asset_directory: config/assets/seasonal
     remove_overlays: true
     overlay_files:
-      - reapply_overlays: false
-      - repo: overlays/movies
+      - default: streaming
+      - default: ribbon
     radarr:
       url: http://arr-suite-radarr:7878
       token: $RADARR_TOKEN
