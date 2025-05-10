@@ -60,8 +60,8 @@ libraries:
       #
       # # collections
       # - default: franchise
-      # - default: networks
-      # - default: streaming
+      - default: networks
+      - default: streaming
       #
       # # custom
       # - repo: charts
