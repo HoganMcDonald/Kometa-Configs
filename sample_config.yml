@@ -59,8 +59,8 @@ libraries:
       # - default: golden
       #
       # # collections
-      # - default: franchise
-      # - default: networks
+      - default: franchise
+      - default: networks
       - default: streaming
       #
       # # custom
