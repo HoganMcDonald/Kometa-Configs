@@ -101,10 +101,10 @@ libraries:
 #         path: metadata/tv.yml
 #         sync_tags: true
 #         add_blank_entries: true
-# playlist_files:
-# - default: playlist                  # This is a file within Kometa's defaults folder
-#   template_variables:
-#     libraries: Movies, TV Shows      # list of libraries that you want the Kometa Defaults playlists to look at
+playlist_files:
+- default: playlist
+  template_variables:
+    libraries: Movies, TV Shows
 
 
 ######################################################
