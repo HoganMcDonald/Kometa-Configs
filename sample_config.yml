@@ -54,22 +54,17 @@ libraries:
       configured: false
       managed: true
     collection_files:
-      # # awards
-      - default: emmy
-      - default: golden
-      #
-      # # collections
-      # - default: franchise
-      - default: networks
-      - default: streaming
-      #
-      # # custom
-      # - repo: charts
-      #   asset_directory: config/assets/charts
+      # collections
+      # - default: streaming
+
+      # custom
+      - repo: charts
+        asset_directory: config/assets/charts
       # - repo: tv/trakt
       #   asset_directory: config/assets/collections
-    remove_overlays: true
+    remove_overlays: false
     overlay_files:
+      - default: resolution
       - default: streaming
       - default: ribbon
     sonarr:
