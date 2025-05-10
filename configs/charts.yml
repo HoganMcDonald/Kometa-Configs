@@ -51,11 +51,3 @@ collections:
       visible_home: true
       visible_shared: true
       visible_library: true
-      sonarr_add_missing: true
-      sonarr_add_existing: true
-      sonarr_search: false
-      sonarr_monitor: latest
-      radarr_add_missing: true
-      radarr_add_existing: true
-      radarr_monitor: true
-      radarr_search: true

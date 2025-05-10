@@ -35,16 +35,16 @@ libraries:
     radarr:
       url: http://arr-suite-radarr:7878
       token: $RADARR_TOKEN
-      add_missing: false
-      add_existing: false
-      upgrade_existing: false
-      monitor_existing: false
+      add_missing: true
+      add_existing: true
+      upgrade_existing: true
+      monitor_existing: true
       root_folder_path: /media/movies
       monitor: true
       availability: released
       quality_profile: 1080p Balanced
       tag:
-      search: false
+      search: true
       radarr_path:
       plex_path:
       ignore_cache: false
