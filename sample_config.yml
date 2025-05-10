@@ -76,6 +76,8 @@ libraries:
       # - repo: tv/trakt
       #   asset_directory: config/assets/collections
       #   schedule: hourly(00-23)
+    metadata_files:
+      - repo: tv/metadata
     schedule_overlays: daily
     # remove_overlays: false
     # overlay_files:

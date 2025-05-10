@@ -1,0 +1,10 @@
+######################################################
+#                 Metadata Corrections               #
+######################################################
+
+metadata:
+  Kitchen Nightmares (2023):
+    match:
+      title: Kitchen Nightmares
+      year: 2023
+      mapping_id: 80552
