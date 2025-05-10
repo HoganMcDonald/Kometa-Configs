@@ -68,8 +68,6 @@ libraries:
       #   asset_directory: config/assets/charts
       - repo: tv/trakt
         asset_directory: config/assets/collections
-    metadata_files:
-      - repo: tv/metadata
     remove_overlays: true
     overlay_files:
       - default: streaming
