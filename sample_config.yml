@@ -23,8 +23,7 @@ libraries:
       #   asset_directory: config/assets/people
       - repo: movies/trakt
         asset_directory: config/assets/collections
-      - repo: streaming
-        asset_directory: config/assets/streaming
+      - default: streaming
       # - repo: movies/seasonal
       #   asset_directory: config/assets/seasonal
     remove_overlays: true
