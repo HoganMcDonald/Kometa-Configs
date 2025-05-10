@@ -6,23 +6,23 @@ collections:
   Reality Background Noise:
     trakt_list:
       - https://trakt.tv/users/hogan12907/lists/reality-background-noise
-    collection_order: released
+    collection_order: episode_release.desc
     sync_mode: sync
     schedule: hourly(00-23)
     sonarr_add_missing: true
     sonarr_search: true
-    sonarr_monitor: true
+    sonarr_monitor: all
     visible_home: true
     visible_library: false
   Casual Nonsense:
     trakt_list:
       - https://trakt.tv/users/hogan12907/lists/casual-nonsense
-    collection_order: released
+    collection_order: episode_release.desc
     sync_mode: sync
     schedule: hourly(00-23)
     sonarr_add_missing: true
     sonarr_search: true
-    sonarr_monitor: true
+    sonarr_monitor: all
     visible_home: true
     visible_library: false
   Bweep:
@@ -33,6 +33,6 @@ collections:
     schedule: hourly(00-23)
     sonarr_add_missing: true
     sonarr_search: true
-    sonarr_monitor: true
+    sonarr_monitor: all
     visible_home: false
     visible_library: false
