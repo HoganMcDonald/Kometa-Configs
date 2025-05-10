@@ -8,7 +8,7 @@ collections:
       - https://trakt.tv/users/hogan12907/lists/reality-background-noise
     collection_order: released
     sync_mode: sync
-    schedule: hourly
+    schedule: hourly(00-23)
     sonarr_add_missing: true
     sonarr_search: true
     sonarr_monitor: true
@@ -19,7 +19,7 @@ collections:
       - https://trakt.tv/users/hogan12907/lists/casual-nonsense
     collection_order: released
     sync_mode: sync
-    schedule: hourly
+    schedule: hourly(00-23)
     sonarr_add_missing: true
     sonarr_search: true
     sonarr_monitor: true
@@ -27,10 +27,10 @@ collections:
     visible_library: false
   Bweep:
     trakt_list:
-      - https://trakt.tv/users/hogan12907/lists/casual-nonsense
+      - https://trakt.tv/users/hogan12907/lists/bweeps-up-next
     sync_mode: append
     collection_mode: hide
-    schedule: hourly
+    schedule: hourly(00-23)
     sonarr_add_missing: true
     sonarr_search: true
     sonarr_monitor: true
