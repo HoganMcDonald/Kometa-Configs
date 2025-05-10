@@ -61,13 +61,13 @@ libraries:
       # # collections
       # - default: franchise
       # - default: networks
-      # - default: streaming
+      - default: streaming
       #
       # # custom
       # - repo: charts
       #   asset_directory: config/assets/charts
-      - repo: tv/trakt
-        asset_directory: config/assets/collections
+      # - repo: tv/trakt
+      #   asset_directory: config/assets/collections
     remove_overlays: true
     overlay_files:
       - default: streaming
@@ -96,10 +96,6 @@ libraries:
       item_tmdb_season_titles: true
       content_rating_mapper:
         gb/12A: gb/12
-      metadata_backup:
-        path: metadata/tv.yml
-        sync_tags: true
-        add_blank_entries: true
 # playlist_files:
 # - default: playlist
 #   template_variables:
