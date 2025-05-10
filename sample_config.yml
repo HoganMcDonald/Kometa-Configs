@@ -106,11 +106,11 @@ libraries:
       item_tmdb_season_titles: true
       content_rating_mapper:
         gb/12A: gb/12
-playlist_files:
-- default: playlist
-  schedule: daily
-  template_variables:
-    libraries: Movies, TV Shows
+# playlist_files:
+# - default: playlist
+#   schedule: daily
+#   template_variables:
+#     libraries: Movies, TV Shows
 
 
 ######################################################
