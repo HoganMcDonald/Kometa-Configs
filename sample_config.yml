@@ -7,23 +7,24 @@ libraries:
       configured: false
       managed: true
     collection_files:
-      - default: awards
-      # - repo: movies/movies
-      #   asset_directory: config/assets/collections
-      # - repo: movies/hidden
-      #   asset_directory: config/assets/collections
-      # - repo: movies/tmdb
-      #   asset_directory: config/assets/collections
+
+      # awards
+      - default: oscars
+      - default: cannes
+
+      # collections
+      - default: franchise
+      - default: studios
+      - default: streaming
+      - default: seasonal
+
+      # custom
       - repo: charts
         asset_directory: config/assets/charts
-      - default: studios
       - repo: movies/people
         asset_directory: config/assets/people
       - repo: movies/trakt
         asset_directory: config/assets/collections
-      - default: streaming
-      # - repo: movies/seasonal
-      #   asset_directory: config/assets/seasonal
     remove_overlays: true
     overlay_files:
       - default: streaming
