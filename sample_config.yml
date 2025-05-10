@@ -28,7 +28,7 @@ libraries:
       #   asset_directory: config/assets/streaming
       # - repo: movies/seasonal
       #   asset_directory: config/assets/seasonal
-    remove_overlays: true
+    remove_overlays: false
     overlay_files:
       - reapply_overlays: true
       - repo: overlays/movies
