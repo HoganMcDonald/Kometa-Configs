@@ -8,26 +8,26 @@ libraries:
       managed: true
       less: 1
     collection_files:
-      - repo: movies/awards
-        asset_directory: config/assets/awards
-      - repo: movies/movies
-        asset_directory: config/assets/collections
-      - repo: movies/hidden
-        asset_directory: config/assets/collections
-      - repo: movies/tmdb
-        asset_directory: config/assets/collections
+      # - repo: movies/awards
+      #   asset_directory: config/assets/awards
+      # - repo: movies/movies
+      #   asset_directory: config/assets/collections
+      # - repo: movies/hidden
+      #   asset_directory: config/assets/collections
+      # - repo: movies/tmdb
+      #   asset_directory: config/assets/collections
       - repo: charts
         asset_directory: config/assets/charts
-      - repo: movies/studios
-        asset_directory: config/assets/studios
-      - repo: movies/people
-        asset_directory: config/assets/people
-      - repo: movies/trakt
-        asset_directory: config/assets/collections
-      - repo: streaming
-        asset_directory: config/assets/streaming
-      - repo: movies/seasonal
-        asset_directory: config/assets/seasonal
+      # - repo: movies/studios
+      #   asset_directory: config/assets/studios
+      # - repo: movies/people
+      #   asset_directory: config/assets/people
+      # - repo: movies/trakt
+      #   asset_directory: config/assets/collections
+      # - repo: streaming
+      #   asset_directory: config/assets/streaming
+      # - repo: movies/seasonal
+      #   asset_directory: config/assets/seasonal
     remove_overlays: false
     overlay_files:
       - reapply_overlays: false
@@ -53,61 +53,61 @@ libraries:
       split_duplicates: false
       content_rating_mapper:
         gb/12A: gb/12
-  TV Shows:
-    delete_collections:
-      configured: false
-      managed: true
-      less: 1
-    collection_files:
-      - repo: tv/tv
-        asset_directory: config/assets/collections
-      - repo: tv/hidden
-        asset_directory: config/assets/collections
-      - repo: tv/trakt
-        asset_directory: config/assets/collections
-      - repo: charts
-        asset_directory: config/assets/charts
-      - repo: streaming
-        asset_directory: config/assets/streaming
-      - repo: tv/seasonal
-        asset_directory: config/assets/seasonal
-    metadata_files:
-      - repo: tv/metadata
-    remove_overlays: false
-    overlay_files:
-      - reapply_overlays: false
-      - repo: overlays/tv
-    sonarr:
-      url: http://arr-suite-sonarr:8989
-      token: $SONARR_TOKEN
-      cutoff_search: false
-      monitor: all
-      add_missing: false
-      add_existing: false
-      root_folder_path: /media/tv-shows
-      quality_profile: 1080p Balanced
-      language_profile: English
-      upgrade_existing: false
-      monitor_existing: false
-      ignore_cache: false
-      series_type: standard
-      season_folder: true
-      sonarr_path:
-      plex_path:
-    operations:
-      assets_for_all: true
-      split_duplicates: false
-      item_tmdb_season_titles: true
-      content_rating_mapper:
-        gb/12A: gb/12
-      metadata_backup:
-        path: metadata/tv.yml
-        sync_tags: true
-        add_blank_entries: true
-playlist_files:
-- default: playlist                  # This is a file within Kometa's defaults folder
-  template_variables:
-    libraries: Movies, TV Shows      # list of libraries that you want the Kometa Defaults playlists to look at
+#   TV Shows:
+#     delete_collections:
+#       configured: false
+#       managed: true
+#       less: 1
+#     collection_files:
+#       - repo: tv/tv
+#         asset_directory: config/assets/collections
+#       - repo: tv/hidden
+#         asset_directory: config/assets/collections
+#       - repo: tv/trakt
+#         asset_directory: config/assets/collections
+#       - repo: charts
+#         asset_directory: config/assets/charts
+#       - repo: streaming
+#         asset_directory: config/assets/streaming
+#       - repo: tv/seasonal
+#         asset_directory: config/assets/seasonal
+#     metadata_files:
+#       - repo: tv/metadata
+#     remove_overlays: false
+#     overlay_files:
+#       - reapply_overlays: false
+#       - repo: overlays/tv
+#     sonarr:
+#       url: http://arr-suite-sonarr:8989
+#       token: $SONARR_TOKEN
+#       cutoff_search: false
+#       monitor: all
+#       add_missing: false
+#       add_existing: false
+#       root_folder_path: /media/tv-shows
+#       quality_profile: 1080p Balanced
+#       language_profile: English
+#       upgrade_existing: false
+#       monitor_existing: false
+#       ignore_cache: false
+#       series_type: standard
+#       season_folder: true
+#       sonarr_path:
+#       plex_path:
+#     operations:
+#       assets_for_all: true
+#       split_duplicates: false
+#       item_tmdb_season_titles: true
+#       content_rating_mapper:
+#         gb/12A: gb/12
+#       metadata_backup:
+#         path: metadata/tv.yml
+#         sync_tags: true
+#         add_blank_entries: true
+# playlist_files:
+# - default: playlist                  # This is a file within Kometa's defaults folder
+#   template_variables:
+#     libraries: Movies, TV Shows      # list of libraries that you want the Kometa Defaults playlists to look at
 
 
 ######################################################
