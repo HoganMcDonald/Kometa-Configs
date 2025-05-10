@@ -46,7 +46,7 @@ collections:
   Top Ten:
     template: {name: charts, website: Trakt}
     visible_home: true
-    visible_library: true
+    visible_library: false
     radarr_add_missing: true
     radarr_search: true
     radarr_monitor: true

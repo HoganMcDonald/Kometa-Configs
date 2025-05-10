@@ -21,15 +21,15 @@ libraries:
       #   asset_directory: config/assets/studios
       # - repo: movies/people
       #   asset_directory: config/assets/people
-      # - repo: movies/trakt
-      #   asset_directory: config/assets/collections
-      # - repo: streaming
-      #   asset_directory: config/assets/streaming
+      - repo: movies/trakt
+        asset_directory: config/assets/collections
+      - repo: streaming
+        asset_directory: config/assets/streaming
       # - repo: movies/seasonal
       #   asset_directory: config/assets/seasonal
-    remove_overlays: false
+    remove_overlays: true
     overlay_files:
-      - reapply_overlays: true
+      - reapply_overlays: false
       - repo: overlays/movies
     radarr:
       url: http://arr-suite-radarr:7878

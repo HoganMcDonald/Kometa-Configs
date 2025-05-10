@@ -17,6 +17,7 @@ dynamic_collections:
   Streaming:
     template: streaming
     type: custom
+    visible_home: true
     data:
       appletv: Apple TV+
       disney: Disney+
