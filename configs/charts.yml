@@ -50,6 +50,7 @@ collections:
     radarr_add_missing: true
     radarr_search: true
     radarr_monitor: true
+    collection_order: custom
     trakt_chart:
       chart: trending
       limit: 10
