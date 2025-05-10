@@ -51,3 +51,5 @@ collections:
       visible_home: true
       visible_library: true
       radarr_add_missing: true
+      radarr_search: true
+      radarr_monitor: true
