@@ -28,7 +28,7 @@ collections:
   Bweep:
     trakt_list:
       - https://trakt.tv/users/hogan12907/lists/bweeps-up-next
-    sync_mode: append
+    sync_mode: sync
     collection_mode: hide
     schedule: hourly(00-23)
     sonarr_add_missing: true
