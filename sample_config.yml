@@ -55,13 +55,13 @@ libraries:
       managed: true
     collection_files:
       # # awards
-      # - default: emmy
-      # - default: golden
+      - default: emmy
+      - default: golden
       #
       # # collections
-      - default: franchise
-      - default: networks
-      - default: streaming
+      # - default: franchise
+      # - default: networks
+      # - default: streaming
       #
       # # custom
       # - repo: charts
