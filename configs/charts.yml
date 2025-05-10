@@ -49,6 +49,5 @@ collections:
       chart: trending
       limit: 10
       visible_home: true
-      visible_shared: true
       visible_library: true
       radarr_add_missing: true
