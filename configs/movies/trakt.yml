@@ -2,19 +2,15 @@
 #              Trakt Dynamic Collections             #
 ######################################################
 
-templates:
-  trakt:
-    trakt_list_details: <<trakt_user_lists>>
-
-dynamic_collections:
-  #Create collections based on the Trakt lists associated with the authenticated user.
-  Trakt List Collections:
-    template: trakt
-    type: trakt_user_lists
-    data: me
-    template_variables:
-      radarr_add_missing: true
-      radarr_search: true
-      radarr_monitor: true
-      visible_home: true
-      visible_library: false
+collections:
+  Bweep:
+    trakt_list:
+      - https://trakt.tv/users/hogan12907/lists/bweeps-up-next
+    sync_mode: sync
+    collection_mode: hide
+    schedule: hourly(00-23)
+    radarr_add_missing: true
+    radarr_search: true
+    radarr_monitor: all
+    visible_home: false
+    visible_library: false
