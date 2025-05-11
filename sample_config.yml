@@ -152,10 +152,10 @@ settings:
   playlist_exclude_users:
   asset_directory:
   run_order:
-  - operations
+  # - operations
   - metadata
   - collections
-  - overlays
+  # - overlays
   overlay_filetype: png
   overlay_quality:
   overlay_artwork_filetype: png
