@@ -11,6 +11,6 @@ collections:
     schedule: hourly(00-23)
     radarr_add_missing: true
     radarr_search: true
-    radarr_monitor: all
+    radarr_monitor: true
     visible_home: false
     visible_library: false
