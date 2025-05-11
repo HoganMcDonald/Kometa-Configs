@@ -5,28 +5,26 @@ libraries:
   Movies:
     collection_files:
       # awards
-      # - default: oscars
-      #   schedule: weekly
-      # - default: cannes
-      #   schedule: weekly
+      - default: oscars
+        schedule: weekly
 
       # collections
-      # - default: franchise
-      #   schedule: daily
-      # - default: studios
-      #   schedule: daily
-      # - default: streaming
-      #   schedule: daily
-      # - default: seasonal
-      #   schedule: weekly
+      - default: franchise
+        schedule: daily
+      - default: studios
+        schedule: daily
+      - default: streaming
+        schedule: daily
+      - default: seasonal
+        schedule: weekly
 
       # custom
       - repo: charts
         asset_directory: config/assets/charts
         schedule: hourly(00-23)
-      # - repo: movies/people
-      #   asset_directory: config/assets/people
-      #   schedule: daily
+      - repo: movies/people
+        asset_directory: config/assets/people
+        schedule: daily
       - repo: movies/trakt
         asset_directory: config/assets/collections
         schedule: hourly(00-23)
@@ -59,8 +57,8 @@ libraries:
   TV Shows:
     collection_files:
       # collections
-      # - default: streaming
-      #   schedule: daily
+      - default: streaming
+        schedule: daily
 
       # custom
       - repo: charts
@@ -152,10 +150,10 @@ settings:
   playlist_exclude_users:
   asset_directory:
   run_order:
-  # - operations
+  - operations
   - metadata
   - collections
-  # - overlays
+  - overlays
   overlay_filetype: png
   overlay_quality:
   overlay_artwork_filetype: png
