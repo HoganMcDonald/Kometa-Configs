@@ -50,7 +50,6 @@ collections:
     radarr_add_missing: true
     radarr_search: true
     radarr_monitor: true
-    collection_order: custom
     trakt_chart:
       chart: trending
       limit: 10
@@ -58,7 +57,6 @@ collections:
     template: {name: charts, website: Trakt}
     visible_home: true
     visible_library: false
-    collection_order: custom
     trakt_chart:
       chart: trending
       limit: 25
