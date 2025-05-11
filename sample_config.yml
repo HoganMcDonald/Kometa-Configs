@@ -8,28 +8,28 @@ libraries:
       managed: true
     collection_files:
       # awards
-      - default: oscars
-        schedule: weekly
-      - default: cannes
-        schedule: weekly
+      # - default: oscars
+      #   schedule: weekly
+      # - default: cannes
+      #   schedule: weekly
 
       # collections
-      - default: franchise
-        schedule: daily
-      - default: studios
-        schedule: daily
-      - default: streaming
-        schedule: daily
-      - default: seasonal
-        schedule: weekly
+      # - default: franchise
+      #   schedule: daily
+      # - default: studios
+      #   schedule: daily
+      # - default: streaming
+      #   schedule: daily
+      # - default: seasonal
+      #   schedule: weekly
 
       # custom
       - repo: charts
         asset_directory: config/assets/charts
         schedule: hourly(00-23)
-      - repo: movies/people
-        asset_directory: config/assets/people
-        schedule: daily
+      # - repo: movies/people
+      #   asset_directory: config/assets/people
+      #   schedule: daily
       - repo: movies/trakt
         asset_directory: config/assets/collections
         schedule: hourly(00-23)
@@ -37,8 +37,6 @@ libraries:
     remove_overlays: false
     overlay_files:
       - default: resolution
-      - default: streaming
-      - default: ribbon
     radarr:
       url: http://arr-suite-radarr:7878
       token: $RADARR_TOKEN
@@ -66,8 +64,8 @@ libraries:
       managed: true
     collection_files:
       # collections
-      - default: streaming
-        schedule: daily
+      # - default: streaming
+      #   schedule: daily
 
       # custom
       - repo: charts
@@ -82,8 +80,6 @@ libraries:
     remove_overlays: false
     overlay_files:
       - default: resolution
-      - default: streaming
-      - default: ribbon
     sonarr:
       url: http://arr-suite-sonarr:8989
       token: $SONARR_TOKEN

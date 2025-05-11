@@ -43,9 +43,9 @@ collections:
     template: {name: unwatched, library_type: <<library_type>>}
   IMDb Top 250:
     template: {name: imdb, chart: top}
-  Top Ten:
+  Trakt Trending:
     template: {name: charts, website: Trakt}
-    visible_home: true
+    visible_home: false
     visible_library: false
     radarr_add_missing: true
     radarr_search: true
@@ -54,3 +54,11 @@ collections:
     trakt_chart:
       chart: trending
       limit: 10
+  Top Ten:
+    template: {name: charts, website: Trakt}
+    visible_home: true
+    visible_library: false
+    collection_order: custom
+    trakt_chart:
+      chart: trending
+      limit: 25
