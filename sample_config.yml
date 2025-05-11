@@ -6,7 +6,7 @@ libraries:
     collection_files:
       # awards
       - default: oscars
-        schedule: weekly
+        schedule: weekly(monday)
 
       # collections
       - default: franchise
@@ -16,7 +16,7 @@ libraries:
       - default: streaming
         schedule: daily
       - default: seasonal
-        schedule: weekly
+        schedule: weekly(monday)
 
       # custom
       - repo: charts
