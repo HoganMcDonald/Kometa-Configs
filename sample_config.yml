@@ -10,11 +10,11 @@ libraries:
 
       # collections
       - default: franchise
-        schedule: daily
+        schedule: hourly(05)
       - default: studios
-        schedule: daily
+        schedule: hourly(05)
       - default: streaming
-        schedule: daily
+        schedule: hourly(05)
       - default: seasonal
         schedule: weekly(monday)
 
@@ -24,11 +24,11 @@ libraries:
         schedule: hourly(00-23)
       - repo: movies/people
         asset_directory: config/assets/people
-        schedule: daily
+        schedule: hourly(05)
       - repo: movies/trakt
         asset_directory: config/assets/collections
         schedule: hourly(00-23)
-    schedule_overlays: daily
+    schedule_overlays: hourly(05)
     remove_overlays: false
     overlay_files:
       - default: resolution
@@ -58,18 +58,18 @@ libraries:
     collection_files:
       # collections
       - default: streaming
-        schedule: daily
+        schedule: hourly(05)
 
       # custom
       - repo: charts
         asset_directory: config/assets/charts
-        schedule: daily
+        schedule: hourly(05)
       - repo: tv/trakt
         asset_directory: config/assets/collections
         schedule: hourly(00-23)
     metadata_files:
       - repo: tv/metadata
-    schedule_overlays: daily
+    schedule_overlays: hourly(05)
     remove_overlays: false
     overlay_files:
       - default: resolution
@@ -100,7 +100,7 @@ libraries:
         managed: true
 playlist_files:
 - default: playlist
-  schedule: daily
+  schedule: hourly(05)
   template_variables:
     libraries: Movies, TV Shows
 
