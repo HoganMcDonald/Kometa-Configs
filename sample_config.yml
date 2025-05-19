@@ -21,13 +21,11 @@ libraries:
       # custom
       - repo: charts
         asset_directory: config/assets/charts
-        schedule: hourly(00-23)
       - repo: movies/people
         asset_directory: config/assets/people
         schedule: hourly(05)
       - repo: movies/trakt
         asset_directory: config/assets/collections
-        schedule: hourly(00-23)
     schedule_overlays: hourly(05)
     remove_overlays: false
     overlay_files:
@@ -63,10 +61,8 @@ libraries:
       # custom
       - repo: charts
         asset_directory: config/assets/charts
-        schedule: hourly(05)
       - repo: tv/trakt
         asset_directory: config/assets/collections
-        schedule: hourly(00-23)
     metadata_files:
       - repo: tv/metadata
     schedule_overlays: hourly(05)
