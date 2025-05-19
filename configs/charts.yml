@@ -49,18 +49,18 @@ collections:
     radarr_add_missing: true
     radarr_search: true
     radarr_monitor: true
+    sync_mode: sync
+    collection_order: custom
     trakt_chart:
       chart: trending
       limit: 10
-      sync_mode: sync
-      collection_order: custom
       sort_by: release.desc
   Top Ten:
     template: {name: charts, website: Trakt}
     visible_home: true
     visible_library: false
+    sync_mode: sync
+    collection_order: custom
     trakt_chart:
       chart: trending
       limit: 25
-      sync_mode: sync
-      collection_order: custom
