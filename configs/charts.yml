@@ -32,7 +32,6 @@ templates:
     summary: The top 250 best <<library_type>>s of all time based on IMDb user ratings.
   charts:
     smart_label:
-      sort_by: release.desc
       all:
         label: <<smart_label>>
     sort_title: +++++<<collection_name>>
@@ -55,6 +54,7 @@ collections:
       limit: 10
       sync_mode: sync
       collection_order: custom
+      sort_by: release.desc
   Top Ten:
     template: {name: charts, website: Trakt}
     visible_home: true
