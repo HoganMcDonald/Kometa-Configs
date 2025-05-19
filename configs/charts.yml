@@ -53,6 +53,8 @@ collections:
     trakt_chart:
       chart: trending
       limit: 10
+      sync_mode: sync
+      collection_order: custom
   Top Ten:
     template: {name: charts, website: Trakt}
     visible_home: true
@@ -60,3 +62,5 @@ collections:
     trakt_chart:
       chart: trending
       limit: 25
+      sync_mode: sync
+      collection_order: custom
