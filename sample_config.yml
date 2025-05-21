@@ -6,24 +6,24 @@ libraries:
     collection_files:
       # awards
       - default: oscars
-        schedule: weekly(monday)
+        # schedule: weekly(monday)
 
       # collections
       - default: franchise
-        schedule: hourly(05)
+        # schedule: hourly(05)
       - default: studios
-        schedule: hourly(05)
+        # schedule: hourly(05)
       - default: streaming
-        schedule: hourly(05)
+        # schedule: hourly(05)
       - default: seasonal
-        schedule: weekly(monday)
+        # schedule: weekly(monday)
 
       # custom
       - repo: charts
         asset_directory: config/assets/charts
       - repo: movies/people
         asset_directory: config/assets/people
-        schedule: hourly(05)
+        # schedule: hourly(05)
       - repo: movies/trakt
         asset_directory: config/assets/collections
     schedule_overlays: hourly(05)
@@ -56,7 +56,7 @@ libraries:
     collection_files:
       # collections
       - default: streaming
-        schedule: hourly(05)
+        # schedule: hourly(05)
 
       # custom
       - repo: charts
