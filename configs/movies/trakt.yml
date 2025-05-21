@@ -14,3 +14,4 @@ collections:
     radarr_monitor: true
     visible_home: false
     visible_library: false
+    sort_title: +++++<<collection_name>>
