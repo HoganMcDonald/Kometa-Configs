@@ -58,6 +58,7 @@ collections:
     visible_home: true
     visible_library: false
     sync_mode: sync
+    collection_order: custom
     trakt_chart:
       chart: trending
       limit: 25
