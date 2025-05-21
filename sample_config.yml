@@ -51,7 +51,7 @@ libraries:
       split_duplicates: false
       delete_collections:
         configured: false
-        managed: true
+        managed: false
   TV Shows:
     collection_files:
       # collections
@@ -93,7 +93,7 @@ libraries:
       item_tmdb_season_titles: true
       delete_collections:
         configured: false
-        managed: true
+        managed: false
 playlist_files:
 - default: playlist
   schedule: hourly(05)
