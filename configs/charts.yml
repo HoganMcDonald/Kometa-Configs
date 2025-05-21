@@ -54,7 +54,8 @@ collections:
       chart: trending
       limit: 10
   Top Ten:
-    template: {name: charts, website: Trakt}
+    sort_title: +++++<<collection_name>>
+    summary: Collection of moviess trending right now.
     visible_home: true
     visible_library: false
     sync_mode: sync
