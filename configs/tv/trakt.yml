@@ -36,3 +36,58 @@ collections:
     sonarr_monitor: all
     visible_home: false
     visible_library: false
+  Glory Days of TNT:
+    trakt_list:
+      - https://trakt.tv/users/hogan12907/lists/glory-days-of-tnt
+    sync_mode: sync
+    collection_mode: hide
+    schedule: hourly(00-23)
+    sonarr_add_missing: true
+    sonarr_search: true
+    sonarr_monitor: all
+    visible_home: true
+    visible_library: true
+  Cop Cuties:
+    trakt_list:
+      - https://trakt.tv/users/hogan12907/lists/cop-cuties
+    sync_mode: sync
+    collection_mode: hide
+    schedule: hourly(00-23)
+    sonarr_add_missing: true
+    sonarr_search: true
+    sonarr_monitor: all
+    visible_home: true
+    visible_library: true
+  Syfy Classics:
+    trakt_list:
+      - https://trakt.tv/users/hogan12907/lists/syfy-classics
+    sync_mode: sync
+    collection_mode: hide
+    schedule: hourly(00-23)
+    sonarr_add_missing: true
+    sonarr_search: true
+    sonarr_monitor: all
+    visible_home: true
+    visible_library: true
+  Toonami:
+    trakt_list:
+      - https://trakt.tv/users/hogan12907/lists/toonami
+    sync_mode: sync
+    collection_mode: hide
+    schedule: hourly(00-23)
+    sonarr_add_missing: true
+    sonarr_search: true
+    sonarr_monitor: all
+    visible_home: true
+    visible_library: true
+  Scary Monsters & Nice Sprites:
+    trakt_list:
+      - https://trakt.tv/users/hogan12907/lists/scary-monsters-nice-sprites?sort=rank,asc
+    sync_mode: sync
+    collection_mode: hide
+    schedule: hourly(00-23)
+    sonarr_add_missing: true
+    sonarr_search: true
+    sonarr_monitor: all
+    visible_home: true
+    visible_library: true
